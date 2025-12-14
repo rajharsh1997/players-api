@@ -3,64 +3,67 @@ package com.example.players_api.repository;
 import com.example.players_api.model.Player;
 import org.springframework.stereotype.Repository;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class PlayerRepository {
     public List<Player> findAll() {
-        return Arrays.asList(
-                new Player(1L, "Sachin", "Ten"),
-                new Player(2L, "Hamza", "Mir"),
-                new Player(3L, "Cristiano", "Ronaldo"),
-                new Player(4L, "Lionel", "Messi"),
-                new Player(5L, "Neymar", "Jr"),
-                new Player(6L, "Kylian", "Mbappé"),
-                new Player(7L, "Erling", "Haaland"),
-                new Player(8L, "Vinícius", "Júnior"),
-                new Player(9L, "Jude", "Bellingham"),
-                new Player(10L, "Phil", "Foden"),
-                new Player(11L, "Harry", "Kane"),
-                new Player(12L, "Sergio", "Agüero"),
-                new Player(13L, "Neymar", "Santos"),
-                new Player(14L, "Karim", "Benzema"),
-                new Player(15L, "Robert", "Lewandowski"),
-                new Player(16L, "Luka", "Modrić"),
-                new Player(17L, "Toni", "Kroos"),
-                new Player(18L, "Casemiro", "Silva"),
-                new Player(19L, "Sergio", "Busquets"),
-                new Player(20L, "Xavi", "Hernández"),
-                new Player(21L, "Andrés", "Iniesta"),
-                new Player(22L, "David", "Beckham"),
-                new Player(23L, "Wayne", "Rooney"),
-                new Player(24L, "Paul", "Scholes"),
-                new Player(25L, "Roy", "Keane"),
-                new Player(26L, "Zinedine", "Zidane"),
-                new Player(27L, "Ronaldinho", "Gaúcho"),
-                new Player(28L, "Pelé", "Silva"),
-                new Player(29L, "Diego", "Maradona"),
-                new Player(30L, "Johan", "Cruyff"),
-                new Player(31L, "Franz", "Beckenbauer"),
-                new Player(32L, "Pelé", "dos Santos"),
-                new Player(33L, "Gerd", "Müller"),
-                new Player(34L, "Eusébio", "Silva"),
-                new Player(35L, "Gianni", "Rivera"),
-                new Player(36L, "Luis", "Suárez"),
-                new Player(37L, "Alexis", "Sánchez"),
-                new Player(38L, "Arturo", "Vidal"),
-                new Player(39L, "Charles", "Aránguiz"),
-                new Player(40L, "Jean", "Beausejour"),
-                new Player(41L, "Claudio", "Bravo"),
-                new Player(42L, "Mauricio", "Isla"),
-                new Player(43L, "Marcelo", "Bielsa"),
-                new Player(44L, "Ricardo", "Gareca"),
-                new Player(45L, "Jorge", "Sampaoli"),
-                new Player(46L, "Tata", "Martino"),
-                new Player(47L, "Juan", "Pizzi"),
-                new Player(48L, "Fabio", "Cannavaro"),
-                new Player(49L, "Andriy", "Shevchenko"),
-                new Player(50L, "Thiago", "Silva"),
-                new Player(51L, "Sergio", "Ramos"),
-                new Player(52L, "Piqué", "Bernabéu"));
+        List<Player> players = new ArrayList<>();
+
+        players.add(new Player(1, "Sachin", "Ten"));
+        players.add(new Player(2, "Hamza", "Mir"));
+        players.add(new Player(3, "Cristiano", "Ronaldo"));
+        players.add(new Player(4, "Lionel", "Messi"));
+        players.add(new Player(5, "Neymar", "Jr"));
+        players.add(new Player(6, "Kylian", "Mbappé"));
+        players.add(new Player(7, "Erling", "Haaland"));
+        players.add(new Player(8, "Vinícius", "Júnior"));
+        players.add(new Player(9, "Jude", "Bellingham"));
+        players.add(new Player(10, "Phil", "Foden"));
+        players.add(new Player(11, "Harry", "Kane"));
+        players.add(new Player(12, "Sergio", "Agüero"));
+        players.add(new Player(13, "Neymar", "Santos"));
+        players.add(new Player(14, "Karim", "Benzema"));
+        players.add(new Player(15, "Robert", "Lewandowski"));
+        players.add(new Player(16, "Luka", "Modrić"));
+        players.add(new Player(17, "Toni", "Kroos"));
+        players.add(new Player(18, "Casemiro", "Silva"));
+        players.add(new Player(19, "Sergio", "Busquets"));
+        players.add(new Player(20, "Xavi", "Hernández"));
+        players.add(new Player(21, "Andrés", "Iniesta"));
+        players.add(new Player(22, "David", "Beckham"));
+        players.add(new Player(23, "Wayne", "Rooney"));
+        players.add(new Player(24, "Paul", "Scholes"));
+        players.add(new Player(25, "Roy", "Keane"));
+        players.add(new Player(26, "Zinedine", "Zidane"));
+        players.add(new Player(27, "Ronaldinho", "Gaúcho"));
+        players.add(new Player(28, "Pelé", "Silva"));
+        players.add(new Player(29, "Diego", "Maradona"));
+        players.add(new Player(30, "Johan", "Cruyff"));
+        players.add(new Player(31, "Franz", "Beckenbauer"));
+        players.add(new Player(32, "Pelé", "dos Santos"));
+        players.add(new Player(33, "Gerd", "Müller"));
+        players.add(new Player(34, "Eusébio", "Silva"));
+        players.add(new Player(35, "Gianni", "Rivera"));
+        players.add(new Player(36, "Luis", "Suárez"));
+        players.add(new Player(37, "Alexis", "Sánchez"));
+        players.add(new Player(38, "Arturo", "Vidal"));
+        players.add(new Player(39, "Charles", "Aránguiz"));
+        players.add(new Player(40, "Jean", "Beausejour"));
+        players.add(new Player(41, "Claudio", "Bravo"));
+        players.add(new Player(42, "Mauricio", "Isla"));
+        players.add(new Player(43, "Marcelo", "Bielsa"));
+        players.add(new Player(44, "Ricardo", "Gareca"));
+        players.add(new Player(45, "Jorge", "Sampaoli"));
+        players.add(new Player(46, "Tata", "Martino"));
+        players.add(new Player(47, "Juan", "Pizzi"));
+        players.add(new Player(48, "Fabio", "Cannavaro"));
+        players.add(new Player(49, "Andriy", "Shevchenko"));
+        players.add(new Player(50, "Thiago", "Silva"));
+        players.add(new Player(51, "Sergio", "Ramos"));
+        players.add(new Player(52, "Piqué", "Bernabéu"));
+
+        return players;
     }
 }

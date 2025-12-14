@@ -4,10 +4,7 @@ import com.example.players_api.dto.PlayerResponse;
 import com.example.players_api.model.Player;
 import com.example.players_api.service.PlayerService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +34,32 @@ public class PlayerController {
         }
 
         return ResponseEntity.ok(response);
+    }
+
+    /*
+     * @GetMapping
+     * //public ResponseEntity<responseType> method(
+     * 
+     * @RequestParam(name="isAdmin", default="false") paramType paramName){
+     * }
+     */
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PlayerResponse> getPlayerById(
+            @PathVariable int id,
+            @RequestParam(name = "isAdmin", defaultValue = "false") boolean isAdmin) {
+
+        List<Player> players = service.getAllPlayers();
+
+        for (Player p : players) {
+            if (p.getId() == id) {
+                String lastName = isAdmin ? p.getLastName() : null;
+                PlayerResponse response = new PlayerResponse(p.getFirstName(), lastName);
+                return ResponseEntity.ok(response);
+            }
+        }
+
+        return ResponseEntity.notFound().build();
     }
 
     @GetMapping("/paginated")

@@ -1,23 +1,24 @@
 package com.example.players_api.model;
 
 public class Player {
-    private Long id;
+    private int id;
     private String lastName;
     private String firstName;
 
-    public Player(){};
+    public Player() {
+    };
 
-    public Player(Long Id, String firstName, String lastName){
+    public Player(int id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public Long getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(int id) {
         this.id = id;
     }
 
